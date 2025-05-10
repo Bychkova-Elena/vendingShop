@@ -1,7 +1,7 @@
 import java.util.HashMap;
 
 public class VendingShop {
-    private HashMap<String, Product> products;
+    private final HashMap<String, Product> products;
     private double collectedMoney;
     private Product selectedProduct;
 
