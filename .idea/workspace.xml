@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="209f4bd4-84d8-4120-95d1-b93ff926e114" name="Changes" comment="добавлен файл" />
+    <list default="true" id="209f4bd4-84d8-4120-95d1-b93ff926e114" name="Changes" comment="удалила ненужные папки">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controllers/VendingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controllers/VendingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingCreateUpdateRqDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingCreateUpdateRqDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingRsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingRsDto.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -163,7 +169,8 @@
       <workItem from="1748260557715" duration="1316000" />
       <workItem from="1748261877624" duration="60000" />
       <workItem from="1748261944214" duration="291000" />
-      <workItem from="1748262241046" duration="681000" />
+      <workItem from="1748262241046" duration="3102000" />
+      <workItem from="1748265355408" duration="384000" />
     </task>
     <task id="LOCAL-00001" summary="create vendingShop class">
       <option name="closed" value="true" />
@@ -229,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748262793451</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="удалила ненужные папки">
+      <option name="closed" value="true" />
+      <created>1748262982532</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1748262982532</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +260,8 @@
     <MESSAGE value="заменила png" />
     <MESSAGE value="добавила констролер для вендинга" />
     <MESSAGE value="добавлен файл" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавлен файл" />
+    <MESSAGE value="удалила ненужные папки" />
+    <option name="LAST_COMMIT_MESSAGE" value="удалила ненужные папки" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

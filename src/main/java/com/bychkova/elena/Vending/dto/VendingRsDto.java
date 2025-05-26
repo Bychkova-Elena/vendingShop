@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.UUID;
 
 @Getter
@@ -14,5 +15,5 @@ public class VendingRsDto {
     private String address;
     private int cellsCount;
     private String status;
-    private UUID[] paymentMethodsId;
+    private ArrayList<UUID> paymentMethodsId;
 }
