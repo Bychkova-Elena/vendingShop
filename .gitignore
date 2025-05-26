@@ -1,5 +1,11 @@
 ### IntelliJ IDEA ###
 out/
+.idea/*
+.gradle
+build/
+*.iml
+!.idea/codeStyles
+!.idea/scopes
 !**/src/main/**/out/
 !**/src/test/**/out/
 
