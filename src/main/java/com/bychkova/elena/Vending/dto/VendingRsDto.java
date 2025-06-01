@@ -1,19 +1,16 @@
 package com.bychkova.elena.Vending.dto;
 
+import com.bychkova.elena.Vending.enumeration.VendingStatus;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.ArrayList;
-import java.util.UUID;
 
 @Getter
 @Setter
 @Builder
 public class VendingRsDto {
-    private UUID id;
+    private Long id;
     private String address;
-    private int cellsCount;
-    private String status;
-    private ArrayList<UUID> paymentMethodsId;
+    private VendingStatus status;
+    private int capacity;
 }

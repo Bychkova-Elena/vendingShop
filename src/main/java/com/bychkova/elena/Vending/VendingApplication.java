@@ -1,6 +1,11 @@
-package java.com.bychkova.elena.Vending;
+package com.bychkova.elena.Vending;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
 public class VendingApplication {
     public static void main(String[] args) {
+        SpringApplication.run(VendingApplication.class, args);
     }
 }

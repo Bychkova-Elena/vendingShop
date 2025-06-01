@@ -4,10 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="209f4bd4-84d8-4120-95d1-b93ff926e114" name="Changes" comment="удалила ненужные папки">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="209f4bd4-84d8-4120-95d1-b93ff926e114" name="Changes" comment="добавлены еще методы в класс VendingController">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Vending.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/enumeration/VendingStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/repository/VendingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/service/VendingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controllers/VendingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controllers/VendingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VendingShop.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/IProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/VendingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/VendingApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controllers/VendingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controller/VendingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingCreateUpdateRqDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingCreateUpdateRqDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingRsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingRsDto.java" afterDir="false" />
     </list>
@@ -73,6 +85,7 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Application.Main.executor&quot;: &quot;Debug&quot;,
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;Gradle.Build vendingShop.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.vendingShop [dependencies].executor&quot;: &quot;Run&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
     &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
@@ -124,6 +137,20 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="VendingApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="vendingShop.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.bychkova.elena.Vending.VendingApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VendingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="vendingShop.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="java.com.bychkova.elena.Vending.VendingApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.vendingShop [dependencies]" />
@@ -170,7 +197,20 @@
       <workItem from="1748261877624" duration="60000" />
       <workItem from="1748261944214" duration="291000" />
       <workItem from="1748262241046" duration="3102000" />
-      <workItem from="1748265355408" duration="384000" />
+      <workItem from="1748265355408" duration="9262000" />
+      <workItem from="1748421808054" duration="33000" />
+      <workItem from="1748796638529" duration="68000" />
+      <workItem from="1748796723778" duration="465000" />
+      <workItem from="1748797194767" duration="54000" />
+      <workItem from="1748797255225" duration="556000" />
+      <workItem from="1748797817713" duration="813000" />
+      <workItem from="1748798645102" duration="647000" />
+      <workItem from="1748799299964" duration="329000" />
+      <workItem from="1748799636157" duration="832000" />
+      <workItem from="1748800475473" duration="1773000" />
+      <workItem from="1748802256253" duration="3000" />
+      <workItem from="1748802698848" duration="1383000" />
+      <workItem from="1748804104566" duration="306000" />
     </task>
     <task id="LOCAL-00001" summary="create vendingShop class">
       <option name="closed" value="true" />
@@ -244,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748262982532</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="добавлены еще методы в класс VendingController">
+      <option name="closed" value="true" />
+      <created>1748266180272</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1748266180272</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +309,8 @@
     <MESSAGE value="добавила констролер для вендинга" />
     <MESSAGE value="добавлен файл" />
     <MESSAGE value="удалила ненужные папки" />
-    <option name="LAST_COMMIT_MESSAGE" value="удалила ненужные папки" />
+    <MESSAGE value="добавлены еще методы в класс VendingController" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавлены еще методы в класс VendingController" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
