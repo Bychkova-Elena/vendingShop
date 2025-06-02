@@ -1,9 +1,6 @@
 package com.bychkova.elena.Vending.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import com.bychkova.elena.Vending.enumeration.VendingStatus;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,6 +8,7 @@ import lombok.Setter;
 @Entity
 @Setter
 @Getter
+@Table(name = "vendings")
 public class Vending {
 
         @Id
@@ -18,6 +16,7 @@ public class Vending {
         private Long id;
 
         private String address;
+        @Enumerated(EnumType.STRING)
         private VendingStatus status;
         private int capacity;
 

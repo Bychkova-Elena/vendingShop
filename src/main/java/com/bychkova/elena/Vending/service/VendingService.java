@@ -1,5 +1,6 @@
 package com.bychkova.elena.Vending.service;
 
+import com.bychkova.elena.Vending.dto.VendingCreateUpdateRqDto;
 import com.bychkova.elena.Vending.entity.Vending;
 import com.bychkova.elena.Vending.repository.VendingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ public class VendingService {
     @Autowired
     private VendingRepository vendingRepository;
 
-    public List<Vending> getAllVendings() {
+    public List<Vending> getAllVending() {
         return vendingRepository.findAll();
     }
 
@@ -22,11 +23,11 @@ public class VendingService {
         return vendingRepository.findById(id);
     }
 
-    public int createVending(Vending vending) {
+    public int createVending(VendingCreateUpdateRqDto vending) {
         return vendingRepository.save(vending);
     }
 
-    public int updateVending(Long id, Vending vendingDetails) {
+    public int updateVending(Long id, VendingCreateUpdateRqDto vendingDetails) {
         return vendingRepository.update(id, vendingDetails);
     }
 

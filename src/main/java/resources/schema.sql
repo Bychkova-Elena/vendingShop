@@ -1,6 +1,6 @@
 CREATE TABLE vendings (
-    id IDENTITY PRIMARY KEY,
-    address VARCHAR(255),
-    status VARCHAR(255),
-    capacity INT
+                          id       BIGINT AUTO_INCREMENT PRIMARY KEY,
+                          address  VARCHAR(255) NOT NULL,
+                          status   VARCHAR(50)  NOT NULL,
+                          capacity INT
 );

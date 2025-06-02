@@ -1,5 +1,6 @@
 package com.bychkova.elena.Vending.repository;
 
+import com.bychkova.elena.Vending.dto.VendingCreateUpdateRqDto;
 import com.bychkova.elena.Vending.entity.Vending;
 import com.bychkova.elena.Vending.enumeration.VendingStatus;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -42,14 +43,14 @@ public class VendingRepository {
         return Optional.of(results.get(0));
     }
 
-    public int save(Vending vending) {
+    public int save(VendingCreateUpdateRqDto vending) {
         String sql = "INSERT INTO vendings (address, status, capacity) VALUES (?, ?, ?)";
-        return jdbcTemplate.update(sql, vending.getAddress(), vending.getStatus(), vending.getCapacity());
+        return jdbcTemplate.update(sql, vending.getAddress(), vending.getStatus().name(), vending.getCapacity());
     }
 
-    public int update(Long id, Vending vending) {
+    public int update(Long id, VendingCreateUpdateRqDto vending) {
         String sql = "UPDATE vendings SET address = ?, status = ?, capacity = ? WHERE id = ?";
-        return jdbcTemplate.update(sql, vending.getAddress(), vending.getStatus(), vending.getCapacity(), id);
+        return jdbcTemplate.update(sql, vending.getAddress(), vending.getStatus().name(), vending.getCapacity(), id);
     }
 
     public int deleteById(Long id) {

@@ -4,24 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="209f4bd4-84d8-4120-95d1-b93ff926e114" name="Changes" comment="добавлены еще методы в класс VendingController">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Vending.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/enumeration/VendingStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/repository/VendingRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/service/VendingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/resources/application.properties" afterDir="false" />
+    <list default="true" id="209f4bd4-84d8-4120-95d1-b93ff926e114" name="Changes" comment="crud для вендинга">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Transaction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VendingShop.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/IProduct.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/VendingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/VendingApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controllers/VendingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controller/VendingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingCreateUpdateRqDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingCreateUpdateRqDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingRsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingRsDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +194,8 @@
       <workItem from="1748800475473" duration="1773000" />
       <workItem from="1748802256253" duration="3000" />
       <workItem from="1748802698848" duration="1383000" />
-      <workItem from="1748804104566" duration="306000" />
+      <workItem from="1748804104566" duration="1875000" />
+      <workItem from="1748893249379" duration="322000" />
     </task>
     <task id="LOCAL-00001" summary="create vendingShop class">
       <option name="closed" value="true" />
@@ -292,7 +277,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748266180272</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="crud для вендинга">
+      <option name="closed" value="true" />
+      <created>1748805933911</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1748805933911</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +303,8 @@
     <MESSAGE value="добавлен файл" />
     <MESSAGE value="удалила ненужные папки" />
     <MESSAGE value="добавлены еще методы в класс VendingController" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавлены еще методы в класс VendingController" />
+    <MESSAGE value="crud для вендинга" />
+    <option name="LAST_COMMIT_MESSAGE" value="crud для вендинга" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,5 +1,6 @@
 package com.bychkova.elena.Vending.controller;
 
+import com.bychkova.elena.Vending.dto.VendingCreateUpdateRqDto;
 import com.bychkova.elena.Vending.entity.Vending;
 import com.bychkova.elena.Vending.service.VendingService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +16,8 @@ public class VendingController {
     private VendingService vendingService;
 
     @GetMapping
-    public List<Vending> getAllUsers() {
-        return vendingService.getAllVendings();
+    public List<Vending> getAllVengings() {
+        return vendingService.getAllVending();
     }
 
     @GetMapping("/{id}")
@@ -26,12 +27,12 @@ public class VendingController {
     }
 
     @PostMapping
-    public int createVending(@RequestBody Vending vending) {
+    public int createVending(@RequestBody VendingCreateUpdateRqDto vending) {
         return vendingService.createVending(vending);
     }
 
     @PutMapping("/{id}")
-    public int updateVending(@PathVariable Long id, @RequestBody Vending vending) {
+    public int updateVending(@PathVariable Long id, @RequestBody VendingCreateUpdateRqDto vending) {
         return vendingService.updateVending(id, vending);
     }
 
