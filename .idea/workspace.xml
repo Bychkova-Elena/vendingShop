@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="209f4bd4-84d8-4120-95d1-b93ff926e114" name="Changes" comment="crud для вендинга">
+    <list default="true" id="209f4bd4-84d8-4120-95d1-b93ff926e114" name="Changes" comment="VendingShop.drawio change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controller/VendingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controller/VendingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingRsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingRsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Vending.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Vending.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/repository/VendingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/repository/VendingRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/service/VendingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/service/VendingService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,6 +201,9 @@
       <workItem from="1748802698848" duration="1383000" />
       <workItem from="1748804104566" duration="1875000" />
       <workItem from="1748893249379" duration="322000" />
+      <workItem from="1748893581684" duration="1948000" />
+      <workItem from="1748961747250" duration="5679000" />
+      <workItem from="1748967800623" duration="17000" />
     </task>
     <task id="LOCAL-00001" summary="create vendingShop class">
       <option name="closed" value="true" />
@@ -285,7 +293,23 @@
       <option name="project" value="LOCAL" />
       <updated>1748805933911</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="фиксы ошибок">
+      <option name="closed" value="true" />
+      <created>1748895229629</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1748895229629</updated>
+    </task>
+    <task id="LOCAL-00013" summary="VendingShop.drawio change">
+      <option name="closed" value="true" />
+      <created>1748895496686</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1748895496686</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +328,9 @@
     <MESSAGE value="удалила ненужные папки" />
     <MESSAGE value="добавлены еще методы в класс VendingController" />
     <MESSAGE value="crud для вендинга" />
-    <option name="LAST_COMMIT_MESSAGE" value="crud для вендинга" />
+    <MESSAGE value="фиксы ошибок" />
+    <MESSAGE value="VendingShop.drawio change" />
+    <option name="LAST_COMMIT_MESSAGE" value="VendingShop.drawio change" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

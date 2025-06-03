@@ -1,7 +1,7 @@
 package com.bychkova.elena.Vending.repository;
 
 import com.bychkova.elena.Vending.dto.VendingCreateUpdateRqDto;
-import com.bychkova.elena.Vending.entity.Vending;
+import com.bychkova.elena.Vending.dto.VendingRsDto;
 import com.bychkova.elena.Vending.enumeration.VendingStatus;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -20,9 +20,9 @@ public class VendingRepository {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    private static final class VendingRowMapper implements RowMapper<Vending> {
-        public Vending mapRow(ResultSet rs, int rowNum) throws SQLException {
-            return new Vending(
+    private static final class VendingRowMapper implements RowMapper<VendingRsDto> {
+        public VendingRsDto mapRow(ResultSet rs, int rowNum) throws SQLException {
+            return new VendingRsDto(
                     Long.valueOf(rs.getString("id")),
                     rs.getString("address"),
                     VendingStatus.valueOf(rs.getString("status")),
@@ -31,14 +31,14 @@ public class VendingRepository {
         }
     }
 
-    public List<Vending> findAll() {
+    public List<VendingRsDto> findAll() {
         String sql = "SELECT * FROM vendings";
         return jdbcTemplate.query(sql, new VendingRowMapper());
     }
 
-    public Optional<Vending> findById(Long id) {
+    public Optional<VendingRsDto> findById(Long id) {
         String sql = "SELECT * FROM vendings WHERE id = ?";
-        List<Vending> results = jdbcTemplate.query(sql, new VendingRowMapper(), id);
+        List<VendingRsDto> results = jdbcTemplate.query(sql, new VendingRowMapper(), id);
         if (results.isEmpty()) return Optional.empty();
         return Optional.of(results.get(0));
     }

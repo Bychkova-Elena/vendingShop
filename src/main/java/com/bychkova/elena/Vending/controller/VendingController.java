@@ -1,7 +1,7 @@
 package com.bychkova.elena.Vending.controller;
 
 import com.bychkova.elena.Vending.dto.VendingCreateUpdateRqDto;
-import com.bychkova.elena.Vending.entity.Vending;
+import com.bychkova.elena.Vending.dto.VendingRsDto;
 import com.bychkova.elena.Vending.service.VendingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,12 +16,12 @@ public class VendingController {
     private VendingService vendingService;
 
     @GetMapping
-    public List<Vending> getAllVengings() {
+    public List<VendingRsDto> getAllVengings() {
         return vendingService.getAllVending();
     }
 
     @GetMapping("/{id}")
-    public Vending getVendingById(@PathVariable Long id) {
+    public VendingRsDto getVendingById(@PathVariable Long id) {
         return vendingService.getVendingById(id)
                 .orElseThrow(() -> new RuntimeException("Vending not found"));
     }

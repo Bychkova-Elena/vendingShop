@@ -13,4 +13,11 @@ public class VendingRsDto {
     private String address;
     private VendingStatus status;
     private int capacity;
+
+    public VendingRsDto(Long id, String address, VendingStatus status, int capacity) {
+        this.id = id;
+        this.address = address;
+        this.status = status;
+        this.capacity = capacity;
+    }
 }
