@@ -4,13 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="209f4bd4-84d8-4120-95d1-b93ff926e114" name="Changes" comment="VendingShop.drawio change">
+    <list default="true" id="209f4bd4-84d8-4120-95d1-b93ff926e114" name="Changes" comment="поменяла типы">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controller/CellController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Cell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/repository/CellRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/service/CellService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controller/VendingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controller/VendingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingRsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingRsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/CellCreateDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingCreateUpdateRqDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingRsDto.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Vending.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Vending.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/repository/VendingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/repository/VendingRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/service/VendingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/service/VendingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/resources/schema.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +68,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -76,6 +90,7 @@
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
     &quot;Gradle.Build vendingShop.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.vendingShop [dependencies].executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.rest-api | #1.executor&quot;: &quot;Run&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
     &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
@@ -87,7 +102,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.codegpt.services.codegpt&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -96,7 +111,7 @@
       <recent name="$PROJECT_DIR$/src/java/com/bychkova/elena/Vendings" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.vendingShop [dependencies]">
+  <component name="RunManager" selected="HTTP Request.rest-api | #1">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="vendingShop" />
@@ -126,6 +141,9 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="rest-api | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="VendingApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="vendingShop.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.bychkova.elena.Vending.VendingApplication" />
@@ -142,6 +160,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.rest-api | #1" />
         <item itemvalue="Gradle.vendingShop [dependencies]" />
       </list>
     </recent_temporary>
@@ -203,7 +222,20 @@
       <workItem from="1748893249379" duration="322000" />
       <workItem from="1748893581684" duration="1948000" />
       <workItem from="1748961747250" duration="5679000" />
-      <workItem from="1748967800623" duration="17000" />
+      <workItem from="1748967800623" duration="1102000" />
+      <workItem from="1749049637418" duration="5070000" />
+      <workItem from="1749058593881" duration="3023000" />
+      <workItem from="1749152554245" duration="5313000" />
+      <workItem from="1749157882243" duration="178000" />
+      <workItem from="1749158064392" duration="65000" />
+      <workItem from="1749158132312" duration="9000" />
+      <workItem from="1749158152169" duration="112000" />
+      <workItem from="1749158267187" duration="142000" />
+      <workItem from="1749158416697" duration="159000" />
+      <workItem from="1749158587166" duration="65000" />
+      <workItem from="1749158659418" duration="803000" />
+      <workItem from="1749159467462" duration="137000" />
+      <workItem from="1749159610803" duration="1162000" />
     </task>
     <task id="LOCAL-00001" summary="create vendingShop class">
       <option name="closed" value="true" />
@@ -309,7 +341,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748895496686</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="поменяла типы">
+      <option name="closed" value="true" />
+      <created>1748967917747</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1748967917747</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,7 +370,8 @@
     <MESSAGE value="crud для вендинга" />
     <MESSAGE value="фиксы ошибок" />
     <MESSAGE value="VendingShop.drawio change" />
-    <option name="LAST_COMMIT_MESSAGE" value="VendingShop.drawio change" />
+    <MESSAGE value="поменяла типы" />
+    <option name="LAST_COMMIT_MESSAGE" value="поменяла типы" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
