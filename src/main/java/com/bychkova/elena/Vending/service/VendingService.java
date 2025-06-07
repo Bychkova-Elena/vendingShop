@@ -5,15 +5,13 @@ import com.bychkova.elena.Vending.entity.Vending;
 import com.bychkova.elena.Vending.enumeration.VendingStatus;
 import com.bychkova.elena.Vending.repository.CellRepository;
 import com.bychkova.elena.Vending.repository.VendingRepository;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 @Service
 @RequiredArgsConstructor
@@ -47,22 +45,21 @@ public class VendingService {
         return vendings;
     }
 
-    @Transactional
     public Vending createVending(String address, VendingStatus status, int capacity) {
+        int VENDINGS_CELLS_COUNT = 25;
+
         Vending vending = new Vending(address, status, capacity);
         vending = vendingRepository.save(vending);
 
-        int VENDINGS_CELLS_COUNT = 25;
-        Vending finalVending = vending;
-        List<Cell> cells = IntStream.range(0, VENDINGS_CELLS_COUNT)
-                .mapToObj(i -> {
-                    Cell cell = new Cell();
-                    cell.setVending(finalVending);
-                    return cell;
-                })
-                .collect(Collectors.toList());
+        List<Cell> cells = new ArrayList<>();
+        for (int i = 0; i < VENDINGS_CELLS_COUNT; i++) {
+            Cell cell = new Cell();
+            cell.setVending(vending);
+            cell = cellRepository.save(cell);
+            vending.addCell(cell);
+            cells.add(cell);
+        }
 
-        vending.setCells(cells);
         return vendingRepository.save(vending);
     }
 

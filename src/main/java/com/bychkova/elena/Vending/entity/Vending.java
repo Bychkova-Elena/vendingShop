@@ -35,6 +35,10 @@ public class Vending {
         }
 
         public Vending() {
+        }
 
+        public void addCell(Cell cell) {
+                cell.setVending(this);
+                this.cells.add(cell);
         }
 }

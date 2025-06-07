@@ -1,5 +1,6 @@
 package com.bychkova.elena.Vending.controller;
 
+import com.bychkova.elena.Vending.dto.VendingResponse;
 import com.bychkova.elena.Vending.entity.Vending;
 import com.bychkova.elena.Vending.service.VendingService;
 import lombok.RequiredArgsConstructor;
@@ -7,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.bychkova.elena.Vending.dto.VendingRequest;
+
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/v1/vending")
@@ -32,13 +35,34 @@ public class VendingController {
     }
 
     @PostMapping
-    public ResponseEntity<Vending> createVending(@RequestBody VendingRequest request) {
+    public ResponseEntity<VendingResponse> createVending(@RequestBody VendingRequest request) {
         Vending vending = vendingService.createVending(
                 request.getAddress(),
                 request.getStatus(),
                 request.getCapacity()
         );
-        return ResponseEntity.ok(vending);
+
+        VendingResponse response = convertToResponse(vending);
+        return ResponseEntity.ok(response);
+    }
+
+    private VendingResponse convertToResponse(Vending vending) {
+        VendingResponse response = new VendingResponse();
+        response.setId(vending.getId());
+        response.setAddress(vending.getAddress());
+        response.setStatus(vending.getStatus().name());
+        response.setCapacity(vending.getCapacity());
+
+        response.setCells(vending.getCells().stream()
+                .map(cell -> {
+                    VendingResponse.CellResponse cr = new VendingResponse.CellResponse();
+                    cr.setId(cell.getId());
+                    cr.setVendingId(cell.getVending().getId());
+                    return cr;
+                })
+                .collect(Collectors.toList()));
+
+        return response;
     }
 
     @PutMapping("/{id}")
@@ -52,3 +76,4 @@ public class VendingController {
         vendingService.deleteVending(id);
     }
 }
+
