@@ -11,7 +11,7 @@ public class CellController {
     @Autowired
     private CellService cellService;
 
-    @GetMapping
+    @GetMapping//TODO: поменять тип вывода
     public Iterable<Cell> getAllCells() {
         return cellService.getAllCells();
     }

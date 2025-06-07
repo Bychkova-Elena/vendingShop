@@ -19,19 +19,22 @@ public class VendingController {
     @Autowired
     private VendingService vendingService;
 
-    @GetMapping
+    @GetMapping //TODO: поменять тип вывода
     public Iterable<Vending> getAllVending() {
         return vendingService.getAllVending();
     }
 
-    @GetMapping("/broken")
+    @GetMapping("/broken") //TODO: поменять тип вывода
     public Iterable<Vending> getBrokenVending() {
         return vendingService.getBrokenVending();
     }
 
     @GetMapping("/{id}")
-    public Vending getVendingById(@PathVariable Long id) {
-        return vendingService.getVendingById(id);
+    public ResponseEntity<VendingResponse> getVendingById(@PathVariable Long id) {
+        Vending vending = vendingService.getVendingById(id);
+
+        VendingResponse response = convertToResponse(vending);
+        return ResponseEntity.ok(response);
     }
 
     @PostMapping
@@ -44,6 +47,20 @@ public class VendingController {
 
         VendingResponse response = convertToResponse(vending);
         return ResponseEntity.ok(response);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<VendingResponse> updateVending(@PathVariable Long id,
+                                 @RequestBody Vending request) {
+        Vending vending = vendingService.updateVending(id, request.getAddress(), request.getStatus());
+
+        VendingResponse response = convertToResponse(vending);
+        return ResponseEntity.ok(response);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteVending(@PathVariable Long id) {
+        vendingService.deleteVending(id);
     }
 
     private VendingResponse convertToResponse(Vending vending) {
@@ -63,17 +80,6 @@ public class VendingController {
                 .collect(Collectors.toList()));
 
         return response;
-    }
-
-    @PutMapping("/{id}")
-    public Vending updateVending(@PathVariable Long id,
-                                 @RequestBody Vending request) {
-        return vendingService.updateVending(id, request.getAddress(), request.getStatus());
-    }
-
-    @DeleteMapping("/{id}")
-    public void deleteVending(@PathVariable Long id) {
-        vendingService.deleteVending(id);
     }
 }
 
