@@ -4,23 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="209f4bd4-84d8-4120-95d1-b93ff926e114" name="Changes" comment="поменяла типы">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controller/CellController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Cell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/repository/CellRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/service/CellService.java" afterDir="false" />
+    <list default="true" id="209f4bd4-84d8-4120-95d1-b93ff926e114" name="Changes" comment="добавила сущность Cell">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/service/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controller/VendingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controller/VendingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/CellCreateDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingCreateUpdateRqDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/VendingRsDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Vending.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Vending.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/repository/VendingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/repository/VendingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/service/VendingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/service/VendingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resources/schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/repository/CellRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/repository/CellRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,6 +227,9 @@
       <workItem from="1749158659418" duration="803000" />
       <workItem from="1749159467462" duration="137000" />
       <workItem from="1749159610803" duration="1162000" />
+      <workItem from="1749160778686" duration="2692000" />
+      <workItem from="1749319907843" duration="1208000" />
+      <workItem from="1749321126273" duration="1889000" />
     </task>
     <task id="LOCAL-00001" summary="create vendingShop class">
       <option name="closed" value="true" />
@@ -349,7 +343,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748967917747</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="добавила сущность Cell">
+      <option name="closed" value="true" />
+      <created>1749196180517</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1749196180517</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +373,8 @@
     <MESSAGE value="фиксы ошибок" />
     <MESSAGE value="VendingShop.drawio change" />
     <MESSAGE value="поменяла типы" />
-    <option name="LAST_COMMIT_MESSAGE" value="поменяла типы" />
+    <MESSAGE value="добавила сущность Cell" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавила сущность Cell" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
