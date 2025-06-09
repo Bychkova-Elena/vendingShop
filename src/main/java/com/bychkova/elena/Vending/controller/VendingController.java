@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.bychkova.elena.Vending.dto.VendingRequest;
 
+import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 @RestController
@@ -19,14 +20,17 @@ public class VendingController {
     @Autowired
     private VendingService vendingService;
 
-    @GetMapping //TODO: поменять тип вывода
-    public Iterable<Vending> getAllVending() {
-        return vendingService.getAllVending();
+    @GetMapping
+    public Iterable<VendingResponse> getAllVending() {
+
+        Iterable<Vending> vendings = vendingService.getAllVending();
+        return convertListToResponse(vendings);
     }
 
-    @GetMapping("/broken") //TODO: поменять тип вывода
-    public Iterable<Vending> getBrokenVending() {
-        return vendingService.getBrokenVending();
+    @GetMapping("/broken")
+    public Iterable<VendingResponse> getBrokenVending() {
+        Iterable<Vending> vendings = vendingService.getBrokenVending();
+        return convertListToResponse(vendings);
     }
 
     @GetMapping("/{id}")
@@ -80,6 +84,16 @@ public class VendingController {
                 .collect(Collectors.toList()));
 
         return response;
+    }
+
+    private Iterable<VendingResponse> convertListToResponse(Iterable<Vending> vendings) {
+        ArrayList<VendingResponse> vengingList = new ArrayList<>();
+
+        for (Vending v : vendings) {
+            vengingList.add(convertToResponse(v));
+        }
+
+        return vengingList;
     }
 }
 

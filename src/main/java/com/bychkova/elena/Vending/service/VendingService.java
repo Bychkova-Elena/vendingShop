@@ -54,11 +54,11 @@ public class VendingService {
         List<Cell> cells = new ArrayList<>();
         for (int i = 0; i < VENDINGS_CELLS_COUNT; i++) {
             Cell cell = new Cell();
-            cell.setVending(vending);
-            cell = cellRepository.save(cell);
-            vending.addCell(cell);
             cells.add(cell);
         }
+
+        Iterable <Cell> IterableCells = cellRepository.saveAll(cells);
+        vending.addCells(IterableCells);
 
         return vendingRepository.save(vending);
     }

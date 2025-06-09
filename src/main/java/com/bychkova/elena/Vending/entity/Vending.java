@@ -37,8 +37,10 @@ public class Vending {
         public Vending() {
         }
 
-        public void addCell(Cell cell) {
-                cell.setVending(this);
-                this.cells.add(cell);
+        public void addCells(Iterable<Cell> cell) {
+                for (Cell c : cell) {
+                        c.setVending(this);
+                        this.cells.add(c);
+                }
         }
 }
