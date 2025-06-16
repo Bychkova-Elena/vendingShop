@@ -9,6 +9,8 @@ import lombok.Setter;
 @Getter
 @Table(name = "vendings_cells")
 public class Cell {
+    private final int CELLS_CAPACITY = 15;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -17,5 +19,18 @@ public class Cell {
     @JoinColumn(name = "vending_id")
     private Vending vending;
 
-    public Cell() {}
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_id")
+    private Product product;
+
+    private int freePlacesCount;
+
+    public Cell() {
+        this.freePlacesCount = CELLS_CAPACITY;
+        this.product = null;
+    }
+
+    public boolean isFull() {
+        return this.freePlacesCount == 0;
+    }
 }

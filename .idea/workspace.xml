@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="209f4bd4-84d8-4120-95d1-b93ff926e114" name="Changes" comment="поменяла типы">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/CellResponse.java" afterDir="false" />
+    <list default="true" id="209f4bd4-84d8-4120-95d1-b93ff926e114" name="Changes" comment="маппинг">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/addProductInCellRq.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controller/CellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controller/CellController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controller/VendingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controller/VendingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Vending.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Vending.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/service/VendingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/service/VendingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/service/CellService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/service/CellService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +234,14 @@
       <workItem from="1749319907843" duration="1208000" />
       <workItem from="1749321126273" duration="6913000" />
       <workItem from="1749496998535" duration="47000" />
-      <workItem from="1749497054078" duration="3085000" />
+      <workItem from="1749497054078" duration="3243000" />
+      <workItem from="1749550318690" duration="53000" />
+      <workItem from="1749564991577" duration="18000" />
+      <workItem from="1749565012711" duration="17000" />
+      <workItem from="1749565042341" duration="18000" />
+      <workItem from="1749565066249" duration="4089000" />
+      <workItem from="1750094367620" duration="92000" />
+      <workItem from="1750094467194" duration="1656000" />
     </task>
     <task id="LOCAL-00001" summary="create vendingShop class">
       <option name="closed" value="true" />
@@ -381,7 +387,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749328006769</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="маппинг">
+      <option name="closed" value="true" />
+      <created>1749500273839</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1749500273839</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +420,8 @@
     <MESSAGE value="crud для продукта" />
     <MESSAGE value="добавление ячеек при добавлении вендинга" />
     <MESSAGE value="поменяла типы" />
-    <option name="LAST_COMMIT_MESSAGE" value="поменяла типы" />
+    <MESSAGE value="маппинг" />
+    <option name="LAST_COMMIT_MESSAGE" value="маппинг" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

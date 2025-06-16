@@ -16,5 +16,7 @@ public class VendingResponse {
     public static class CellResponse {
         private Long id;
         private Long vendingId;
+        private Long productId;
+        private int freePlacesCount;
     }
 }

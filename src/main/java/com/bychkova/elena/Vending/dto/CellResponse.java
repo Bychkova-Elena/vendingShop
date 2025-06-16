@@ -6,4 +6,6 @@ import lombok.Data;
 public class CellResponse {
     private Long id;
     private Long vendingId;
+    private Long productId;
+    private int freePlacesCount;
 }

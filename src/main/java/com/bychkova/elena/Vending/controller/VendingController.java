@@ -3,6 +3,7 @@ package com.bychkova.elena.Vending.controller;
 import com.bychkova.elena.Vending.dto.VendingResponse;
 import com.bychkova.elena.Vending.entity.Vending;
 import com.bychkova.elena.Vending.service.VendingService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -42,7 +43,7 @@ public class VendingController {
     }
 
     @PostMapping
-    public ResponseEntity<VendingResponse> createVending(@RequestBody VendingRequest request) {
+    public ResponseEntity<VendingResponse> createVending(@Valid @RequestBody VendingRequest request) {
         Vending vending = vendingService.createVending(
                 request.getAddress(),
                 request.getStatus(),
@@ -55,7 +56,7 @@ public class VendingController {
 
     @PutMapping("/{id}")
     public ResponseEntity<VendingResponse> updateVending(@PathVariable Long id,
-                                 @RequestBody Vending request) {
+                                                         @Valid @RequestBody VendingRequest request) {
         Vending vending = vendingService.updateVending(id, request.getAddress(), request.getStatus());
 
         VendingResponse response = convertToResponse(vending);
@@ -79,6 +80,10 @@ public class VendingController {
                     VendingResponse.CellResponse cr = new VendingResponse.CellResponse();
                     cr.setId(cell.getId());
                     cr.setVendingId(cell.getVending().getId());
+                    if(cell.getProduct() != null) {
+                        cr.setProductId(cell.getProduct().getId());
+                    }
+                    cr.setFreePlacesCount(cell.getFreePlacesCount());
                     return cr;
                 })
                 .collect(Collectors.toList()));
