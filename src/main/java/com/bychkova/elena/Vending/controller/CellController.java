@@ -29,6 +29,13 @@ public class CellController {
         return convertToResponse(cell);
     }
 
+    @PutMapping("{id}/decrease/product")
+    public CellResponse decreaseProductInCell(@PathVariable Long id) {
+        Cell cell = cellService.decreaseProductInCell(id);
+
+        return convertToResponse(cell);
+    }
+
     private CellResponse convertToResponse(Cell c) {
         CellResponse cellResponse = new CellResponse();
         cellResponse.setId(c.getId());

@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="209f4bd4-84d8-4120-95d1-b93ff926e114" name="Changes" comment="маппинг">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/dto/addProductInCellRq.java" afterDir="false" />
+    <list default="true" id="209f4bd4-84d8-4120-95d1-b93ff926e114" name="Changes" comment="метод добавления продукта в ячейку">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controller/CellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controller/CellController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/service/CellService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/service/CellService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +104,7 @@
       <recent name="$PROJECT_DIR$/src/java/com/bychkova/elena/Vendings" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.VendingApplication (1)">
+  <component name="RunManager" selected="Gradle.vendingShop [dependencies]">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="vendingShop" />
@@ -154,8 +153,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.rest-api | #1" />
         <item itemvalue="Gradle.vendingShop [dependencies]" />
+        <item itemvalue="HTTP Request.rest-api | #1" />
       </list>
     </recent_temporary>
   </component>
@@ -241,7 +240,8 @@
       <workItem from="1749565042341" duration="18000" />
       <workItem from="1749565066249" duration="4089000" />
       <workItem from="1750094367620" duration="92000" />
-      <workItem from="1750094467194" duration="1656000" />
+      <workItem from="1750094467194" duration="6512000" />
+      <workItem from="1750166829571" duration="3909000" />
     </task>
     <task id="LOCAL-00001" summary="create vendingShop class">
       <option name="closed" value="true" />
@@ -395,7 +395,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749500273839</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="метод добавления продукта в ячейку">
+      <option name="closed" value="true" />
+      <created>1750099860237</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1750099860237</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,7 +429,8 @@
     <MESSAGE value="добавление ячеек при добавлении вендинга" />
     <MESSAGE value="поменяла типы" />
     <MESSAGE value="маппинг" />
-    <option name="LAST_COMMIT_MESSAGE" value="маппинг" />
+    <MESSAGE value="метод добавления продукта в ячейку" />
+    <option name="LAST_COMMIT_MESSAGE" value="метод добавления продукта в ячейку" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

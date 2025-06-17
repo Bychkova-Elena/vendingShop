@@ -36,4 +36,20 @@ public class CellService {
 
         return cellRepository.save(cell);
     }
+
+    public Cell decreaseProductInCell(Long id) {
+        Cell cell = cellRepository.findById(id).orElseThrow(() -> new RuntimeException("Cell not found"));
+
+        if (cell.isEmpty()) {
+            throw new RuntimeException("Cell is Empty");
+        }
+
+        var freePlacesCount = cell.getFreePlacesCount();
+        cell.setFreePlacesCount(freePlacesCount + 1);
+        if (freePlacesCount == cell.getCELLS_CAPACITY() - 1) {
+            cell.setProduct(null);
+        }
+
+        return cellRepository.save(cell);
+    }
 }

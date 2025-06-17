@@ -33,4 +33,8 @@ public class Cell {
     public boolean isFull() {
         return this.freePlacesCount == 0;
     }
+
+    public boolean isEmpty() {
+        return this.freePlacesCount == CELLS_CAPACITY;
+    }
 }
