@@ -1,20 +1,21 @@
 package com.bychkova.elena.Vending.service;
 
+import com.bychkova.elena.Vending.dto.VendingResponse;
 import com.bychkova.elena.Vending.entity.Cell;
 import com.bychkova.elena.Vending.entity.Vending;
 import com.bychkova.elena.Vending.enumeration.VendingStatus;
+import com.bychkova.elena.Vending.mapper.VendingMapper;
 import com.bychkova.elena.Vending.repository.CellRepository;
 import com.bychkova.elena.Vending.repository.VendingRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 
 @Service
-@RequiredArgsConstructor
 public class VendingService {
 
     @Autowired
@@ -23,16 +24,21 @@ public class VendingService {
     @Autowired
     private CellRepository cellRepository;
 
-    public Iterable<Vending> getAllVending() {
-        return vendingRepository.findAll();
+    @Autowired
+    private VendingMapper mapper;
+
+    public Iterable<VendingResponse> getAllVending() {
+        return mapper.convertListToResponse(vendingRepository.findAll());
     }
 
-    public Vending getVendingById(Long id) {
-        return vendingRepository.findById(id)
+    public Optional<VendingResponse> getVendingById(Long id) {
+        var vending = vendingRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Vending not found"));
+
+        return Optional.ofNullable(mapper.convertToResponse(vending));
     }
 
-    public Iterable<Vending> getBrokenVending() {
+    public Iterable<VendingResponse> getBrokenVending() {
         Iterable<Vending> vendings = vendingRepository.findAll();
         Iterator <Vending> vendingsIterator = vendings.iterator();
 
@@ -42,10 +48,10 @@ public class VendingService {
                 vendingsIterator.remove();
             }
         }
-        return vendings;
+        return mapper.convertListToResponse(vendings);
     }
 
-    public Vending createVending(String address, VendingStatus status, int capacity) {
+    public VendingResponse createVending(String address, VendingStatus status, int capacity) {
         int VENDINGS_CELLS_COUNT = 25;
 
         Vending vending = new Vending(address, status, capacity);
@@ -60,17 +66,19 @@ public class VendingService {
         Iterable <Cell> IterableCells = cellRepository.saveAll(cells);
         vending.addCells(IterableCells);
 
-        return vendingRepository.save(vending);
+        return mapper.convertToResponse(vendingRepository.save(vending));
     }
 
-    public Vending updateVending(Long id, String address, VendingStatus status) {
-        return vendingRepository.findById(id)
+    public Optional<VendingResponse> updateVending(Long id, String address, VendingStatus status) {
+        var v = vendingRepository.findById(id)
                 .map(vending -> {
                     vending.setAddress(address);
                     vending.setStatus(status);
                     return vendingRepository.save(vending);
                 })
                 .orElseThrow(() -> new RuntimeException("Vending not found"));
+
+        return Optional.ofNullable(mapper.convertToResponse(v));
     }
 
     public void deleteVending(Long id) {
