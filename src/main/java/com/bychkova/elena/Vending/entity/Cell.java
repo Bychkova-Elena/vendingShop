@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Table(name = "vendings_cells")
 public class Cell {
-    private final int CELLS_CAPACITY = 15;
+    private int CELLS_CAPACITY;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,6 +24,12 @@ public class Cell {
     private Product product;
 
     private int freePlacesCount;
+
+    public Cell(int capacity) {
+        CELLS_CAPACITY = capacity;
+        this.freePlacesCount = capacity;
+        this.product = null;
+    }
 
     public Cell() {
         this.freePlacesCount = CELLS_CAPACITY;

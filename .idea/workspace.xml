@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="209f4bd4-84d8-4120-95d1-b93ff926e114" name="Changes" comment="добавила мапинг для вендинга">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="209f4bd4-84d8-4120-95d1-b93ff926e114" name="Changes" comment="добавила мапинг для ячеек">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/entity/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/service/VendingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/service/VendingService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,6 +248,7 @@
       <workItem from="1750262522295" duration="41000" />
       <workItem from="1750358154274" duration="11000" />
       <workItem from="1750610394861" duration="12000" />
+      <workItem from="1750610413992" duration="704000" />
     </task>
     <task id="LOCAL-00001" summary="create vendingShop class">
       <option name="closed" value="true" />
@@ -424,7 +426,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750173937590</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="добавила мапинг для ячеек">
+      <option name="closed" value="true" />
+      <created>1750610590724</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1750610590724</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +463,8 @@
     <MESSAGE value="метод добавления продукта в ячейку" />
     <MESSAGE value="добавлен метод decreaseProductInCell" />
     <MESSAGE value="добавила мапинг для вендинга" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавила мапинг для вендинга" />
+    <MESSAGE value="добавила мапинг для ячеек" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавила мапинг для ячеек" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

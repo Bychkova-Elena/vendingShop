@@ -52,14 +52,14 @@ public class VendingService {
     }
 
     public VendingResponse createVending(String address, VendingStatus status, int capacity) {
-        int VENDINGS_CELLS_COUNT = 25;
+        int VENDINGS_CELLS_COUNT = 15;
 
         Vending vending = new Vending(address, status, capacity);
         vending = vendingRepository.save(vending);
 
         List<Cell> cells = new ArrayList<>();
         for (int i = 0; i < VENDINGS_CELLS_COUNT; i++) {
-            Cell cell = new Cell();
+            Cell cell = new Cell(capacity);
             cells.add(cell);
         }
 
