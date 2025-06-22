@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="209f4bd4-84d8-4120-95d1-b93ff926e114" name="Changes" comment="добавлен метод decreaseProductInCell">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/mapper/VendingMapper.java" afterDir="false" />
+    <list default="true" id="209f4bd4-84d8-4120-95d1-b93ff926e114" name="Changes" comment="добавила мапинг для вендинга">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controller/VendingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/controller/VendingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/service/VendingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bychkova/elena/Vending/service/VendingService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,6 +243,10 @@
       <workItem from="1750172737964" duration="59000" />
       <workItem from="1750172803361" duration="290000" />
       <workItem from="1750173100156" duration="33000" />
+      <workItem from="1750173137279" duration="873000" />
+      <workItem from="1750262522295" duration="41000" />
+      <workItem from="1750358154274" duration="11000" />
+      <workItem from="1750610394861" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="create vendingShop class">
       <option name="closed" value="true" />
@@ -415,7 +416,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750171351413</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="добавила мапинг для вендинга">
+      <option name="closed" value="true" />
+      <created>1750173937590</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1750173937590</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +452,8 @@
     <MESSAGE value="маппинг" />
     <MESSAGE value="метод добавления продукта в ячейку" />
     <MESSAGE value="добавлен метод decreaseProductInCell" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавлен метод decreaseProductInCell" />
+    <MESSAGE value="добавила мапинг для вендинга" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавила мапинг для вендинга" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
