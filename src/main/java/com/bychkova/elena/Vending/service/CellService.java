@@ -4,17 +4,18 @@ import com.bychkova.elena.Vending.entity.Cell;
 import com.bychkova.elena.Vending.entity.Product;
 import com.bychkova.elena.Vending.repository.CellRepository;
 import com.bychkova.elena.Vending.repository.ProductRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CellService {
 
-    @Autowired
-    private CellRepository cellRepository;
+    private final CellRepository cellRepository;
+    private final ProductRepository productRepository;
 
-    @Autowired
-    private ProductRepository productRepository;
+    public CellService(CellRepository cellRepository, ProductRepository productRepository) {
+        this.cellRepository = cellRepository;
+        this.productRepository = productRepository;
+    }
 
     public Iterable<Cell> getAllCells() {
         return cellRepository.findAll();

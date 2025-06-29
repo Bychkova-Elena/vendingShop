@@ -6,19 +6,18 @@ import com.bychkova.elena.Vending.mapper.CellMapper;
 import com.bychkova.elena.Vending.service.CellService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/api/v1/cells")
 public class CellController {
 
-    @Autowired
-    private CellService cellService;
+    private final CellService cellService;
+    private final CellMapper mapper;
 
-    @Autowired
-    private CellMapper mapper;
+    public CellController(CellService cellService, CellMapper mapper) {
+        this.cellService = cellService;
+        this.mapper = mapper;
+    }
 
     @GetMapping
     public Iterable<CellResponse> getAllCells() {

@@ -3,8 +3,6 @@ package com.bychkova.elena.Vending.controller;
 import com.bychkova.elena.Vending.dto.VendingResponse;
 import com.bychkova.elena.Vending.service.VendingService;
 import jakarta.validation.Valid;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.bychkova.elena.Vending.dto.VendingRequest;
 
@@ -12,11 +10,13 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/vending")
-@RequiredArgsConstructor
 public class VendingController {
 
-    @Autowired
-    private VendingService vendingService;
+    private final VendingService vendingService;
+
+    public VendingController(VendingService vendingService) {
+        this.vendingService = vendingService;
+    }
 
     @GetMapping
     public Iterable<VendingResponse> getAllVending() {

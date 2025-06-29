@@ -7,8 +7,8 @@ import com.bychkova.elena.Vending.enumeration.VendingStatus;
 import com.bychkova.elena.Vending.mapper.VendingMapper;
 import com.bychkova.elena.Vending.repository.CellRepository;
 import com.bychkova.elena.Vending.repository.VendingRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -18,14 +18,15 @@ import java.util.Optional;
 @Service
 public class VendingService {
 
-    @Autowired
-    private VendingRepository vendingRepository;
+    private final VendingRepository vendingRepository;
+    private final CellRepository cellRepository;
+    private final VendingMapper mapper;
 
-    @Autowired
-    private CellRepository cellRepository;
-
-    @Autowired
-    private VendingMapper mapper;
+    public VendingService(VendingRepository vendingRepository, CellRepository cellRepository, VendingMapper mapper) {
+        this.vendingRepository = vendingRepository;
+        this.mapper = mapper;
+        this.cellRepository = cellRepository;
+    }
 
     public Iterable<VendingResponse> getAllVending() {
         return mapper.convertListToResponse(vendingRepository.findAll());
@@ -51,6 +52,7 @@ public class VendingService {
         return mapper.convertListToResponse(vendings);
     }
 
+    @Transactional
     public VendingResponse createVending(String address, VendingStatus status, int capacity) {
         int VENDINGS_CELLS_COUNT = 15;
 
