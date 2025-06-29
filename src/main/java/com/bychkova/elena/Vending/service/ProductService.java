@@ -1,6 +1,7 @@
 package com.bychkova.elena.Vending.service;
 
 import com.bychkova.elena.Vending.entity.Product;
+import com.bychkova.elena.Vending.exception.ProductNotFoundException;
 import com.bychkova.elena.Vending.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +19,7 @@ public class ProductService {
     }
 
     public Product getProductById(Long id) {
-        return productRepository.findById(id).orElseThrow(() -> new RuntimeException("Product not found"));
+        return productRepository.findById(id).orElseThrow(() -> new ProductNotFoundException(id));
     }
 
     public Product createProduct(String name, double price) {
@@ -33,6 +34,6 @@ public class ProductService {
         return productRepository.findById(id).map(product -> {
                     product.setPrice(price);
                     return productRepository.save(product);
-                }).orElseThrow(() -> new RuntimeException("Product not found"));
+                }).orElseThrow(() -> new ProductNotFoundException(id));
     }
 }

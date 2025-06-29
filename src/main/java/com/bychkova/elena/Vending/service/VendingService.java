@@ -4,6 +4,7 @@ import com.bychkova.elena.Vending.dto.VendingResponse;
 import com.bychkova.elena.Vending.entity.Cell;
 import com.bychkova.elena.Vending.entity.Vending;
 import com.bychkova.elena.Vending.enumeration.VendingStatus;
+import com.bychkova.elena.Vending.exception.VendingNotFoundException;
 import com.bychkova.elena.Vending.mapper.VendingMapper;
 import com.bychkova.elena.Vending.repository.CellRepository;
 import com.bychkova.elena.Vending.repository.VendingRepository;
@@ -34,7 +35,7 @@ public class VendingService {
 
     public Optional<VendingResponse> getVendingById(Long id) {
         var vending = vendingRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Vending not found"));
+                .orElseThrow(() -> new VendingNotFoundException(id));
 
         return Optional.ofNullable(mapper.convertToResponse(vending));
     }
@@ -78,12 +79,15 @@ public class VendingService {
                     vending.setStatus(status);
                     return vendingRepository.save(vending);
                 })
-                .orElseThrow(() -> new RuntimeException("Vending not found"));
+                .orElseThrow(() -> new VendingNotFoundException(id));
 
         return Optional.ofNullable(mapper.convertToResponse(v));
     }
 
     public void deleteVending(Long id) {
+        vendingRepository.findById(id)
+                .orElseThrow(() -> new VendingNotFoundException(id));
+
         vendingRepository.deleteById(id);
     }
 
