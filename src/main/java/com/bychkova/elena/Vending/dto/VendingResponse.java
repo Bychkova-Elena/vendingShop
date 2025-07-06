@@ -17,6 +17,5 @@ public class VendingResponse {
         private Long id;
         private Long vendingId;
         private Long productId;
-        private int freePlacesCount;
     }
 }

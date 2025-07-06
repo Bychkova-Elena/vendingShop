@@ -15,7 +15,6 @@ public class CellMapper {
         if(c.getProduct() != null) {
             cellResponse.setProductId(c.getProduct().getId());
         }
-        cellResponse.setFreePlacesCount(c.getFreePlacesCount());
 
         return cellResponse;
     }

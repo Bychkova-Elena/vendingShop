@@ -2,11 +2,13 @@ package com.bychkova.elena.Vending.service;
 
 import com.bychkova.elena.Vending.dto.VendingResponse;
 import com.bychkova.elena.Vending.entity.Cell;
+import com.bychkova.elena.Vending.entity.CellsCapacity;
 import com.bychkova.elena.Vending.entity.Vending;
 import com.bychkova.elena.Vending.enumeration.VendingStatus;
 import com.bychkova.elena.Vending.exception.VendingNotFoundException;
 import com.bychkova.elena.Vending.mapper.VendingMapper;
 import com.bychkova.elena.Vending.repository.CellRepository;
+import com.bychkova.elena.Vending.repository.CellsCapacityRepository;
 import com.bychkova.elena.Vending.repository.VendingRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,12 +23,14 @@ public class VendingService {
 
     private final VendingRepository vendingRepository;
     private final CellRepository cellRepository;
+    private final CellsCapacityRepository cellsCapacityRepository;
     private final VendingMapper mapper;
 
-    public VendingService(VendingRepository vendingRepository, CellRepository cellRepository, VendingMapper mapper) {
+    public VendingService(VendingRepository vendingRepository, CellRepository cellRepository, CellsCapacityRepository cellsCapacityRepository, VendingMapper mapper) {
         this.vendingRepository = vendingRepository;
         this.mapper = mapper;
         this.cellRepository = cellRepository;
+        this.cellsCapacityRepository = cellsCapacityRepository;
     }
 
     public Iterable<VendingResponse> getAllVending() {
@@ -61,12 +65,18 @@ public class VendingService {
         vending = vendingRepository.save(vending);
 
         List<Cell> cells = new ArrayList<>();
+        List<CellsCapacity> cellsCapacityList = new ArrayList<>();
         for (int i = 0; i < VENDINGS_CELLS_COUNT; i++) {
-            Cell cell = new Cell(capacity);
+            Cell cell = new Cell();
             cells.add(cell);
+
+            CellsCapacity cellsCapacity = new CellsCapacity(capacity);
+            cellsCapacity.setCell(cell);
+            cellsCapacityList.add(cellsCapacity);
         }
 
         Iterable <Cell> IterableCells = cellRepository.saveAll(cells);
+        cellsCapacityRepository.saveAll(cellsCapacityList);
         vending.addCells(IterableCells);
 
         return mapper.convertToResponse(vendingRepository.save(vending));

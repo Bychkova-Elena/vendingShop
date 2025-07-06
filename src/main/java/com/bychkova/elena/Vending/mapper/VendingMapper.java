@@ -25,7 +25,6 @@ public class VendingMapper {
                     if(cell.getProduct() != null) {
                         cr.setProductId(cell.getProduct().getId());
                     }
-                    cr.setFreePlacesCount(cell.getFreePlacesCount());
                     return cr;
                 })
                 .collect(Collectors.toList()));
